@@ -15,7 +15,7 @@ const items = [
 
 export default function Ticker() {
   return (
-    <div className="relative py-3.5 overflow-hidden bg-[#0D0D0D] border-y border-white/5">
+    <div className="relative mt-5 py-3.5 overflow-hidden bg-orange ">
 
       {/* ── Left fade ── */}
       <div

@@ -1,25 +1,25 @@
 const members = [
   {
     name: 'Benita Joseph',
-    role: 'Alumni',
+    role: 'Founder',
     initial: 'B',
     bg: 'linear-gradient(135deg, #1a0800 0%, #0f0500 100%)',
   },
   {
-    name: 'Jonathan Efkoan',
-    role: 'Company / CEO',
+    name: 'Jonathan Chosen',
+    role: 'Community Lead',
     initial: 'J',
     bg: 'linear-gradient(135deg, #1a1000 0%, #0f0800 100%)',
   },
   {
-    name: 'Kolawole Kin-Kim',
+    name: 'Kolawole Ibrahim',
     role: 'Programs Director',
     initial: 'K',
     bg: 'linear-gradient(135deg, #001a0e 0%, #000f08 100%)',
   },
   {
-    name: 'Ranke Bohoahon',
-    role: 'Growth Analyst',
+    name: 'Banke Salaudeen',
+    role: 'Growth Strategist',
     initial: 'R',
     bg: 'linear-gradient(135deg, #08001a 0%, #04000f 100%)',
   },
