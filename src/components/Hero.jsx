@@ -20,11 +20,11 @@ export default function Hero() {
   const ref = (i) => (el) => (itemsRef.current[i] = el);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0A0A0A]">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-dark">
 
       {/* ── Background radial glow ── */}
       <div
-        className="absolute top-1/2 right-[-100px] -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
+        className="absolute top-1/2 -right-25 -translate-y-1/2 w-175 h-175 rounded-full pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(255,92,0,0.10) 0%, transparent 70%)',
           filter: 'blur(60px)',
@@ -62,7 +62,7 @@ export default function Hero() {
                 Grow
               </span>
               <span
-                className="block text-[#FF5C00] text-glow"
+                className="block text-orange text-glow"
                 style={{ fontSize: 'clamp(64px, 9vw, 110px)' }}>
                 Through
               </span>
@@ -101,23 +101,23 @@ export default function Hero() {
         {/* ════ RIGHT — Orbit graphic ════ */}
         <div
           ref={ref(4)}
-          className="relative flex items-center justify-center h-[360px] lg:h-[480px]"
+          className="relative flex items-center justify-center h-90 lg:h-120"
         >
           {/* Outer dashed ring */}
           <div
-            className="absolute w-[300px] h-[300px] lg:w-[360px] lg:h-[360px] rounded-full border border-white/10"
+            className="absolute w-75 h-75 lg:w-90 lg:h-90 rounded-full border border-white/10"
             style={{ borderStyle: 'dashed' }}
           />
 
           {/* Middle ring */}
-          <div className="absolute w-[200px] h-[200px] lg:w-[240px] lg:h-[240px] rounded-full border border-white/8" />
+          <div className="absolute w-50 h-50 lg:w-60 lg:h-60 rounded-full border border-white/8" />
 
           {/* Inner ring */}
-          <div className="absolute w-[120px] h-[120px] rounded-full border border-[#FF5C00]/15" />
+          <div className="absolute w-30 h-30 rounded-full border border-orange/15" />
 
           {/* Center GTC circle */}
           <div
-            className="float-anim relative z-10 w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-[#FF5C00] flex items-center justify-center"
+            className="float-anim relative z-10 w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-orange flex items-center justify-center"
             style={{ boxShadow: '0 0 70px rgba(255,92,0,0.55)' }}
           >
             <span className="font-display text-white tracking-widest"
@@ -142,7 +142,7 @@ export default function Hero() {
             }}
           >
             <div
-              className="font-display text-[#FF5C00] leading-none"
+              className="font-display text-orange leading-none"
               style={{ fontSize: '32px' }}
             >
               503+
@@ -162,7 +162,7 @@ export default function Hero() {
             }}
           >
             <div
-              className="font-display text-[#FF5C00] leading-none"
+              className="font-display text-orange leading-none"
               style={{ fontSize: '32px' }}
             >
               98%
@@ -179,7 +179,7 @@ export default function Hero() {
         <span className="font-body text-[10px] tracking-[0.25em] uppercase text-white/30">
           Scroll
         </span>
-        <div className="w-px h-10 bg-gradient-to-b from-[#FF5C00]/60 to-transparent" />
+        <div className="w-px h-10 bg-linear-to-b from-orange/60 to-transparent" />
       </div>
 
     </section>

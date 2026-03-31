@@ -59,7 +59,7 @@ export default function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 `font-body text-[13px] tracking-wide transition-colors duration-200 relative group ${
-                  isActive ? 'text-[#FF5C00]' : 'text-white/55 hover:text-white'
+                  isActive ? 'text-orange' : 'text-white/55 hover:text-white'
                 }`
               }
             >
@@ -90,7 +90,7 @@ export default function Navbar() {
         {/* ── Mobile hamburger ── */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 p-1"
+          className="md:hidden flex flex-col justify-center gap-1.25 w-8 h-8 p-1"
           aria-label="Toggle menu"
         >
           <span
@@ -137,7 +137,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
                 `font-body text-[14px] tracking-wide transition-colors duration-200 ${
-                  isActive ? 'text-[#FF5C00]' : 'text-white/60 hover:text-white'
+                  isActive ? 'text-orange' : 'text-white/60 hover:text-white'
                 }`
               }
               style={{
