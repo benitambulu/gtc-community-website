@@ -65,7 +65,7 @@ export default function WhatWeDo() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="reveal group flex gap-6 py-8 transition-colors duration-300 hover:bg-orange/3 px-2 -mx-2"
+              className="reveal group flex gap-6 py-8 transition-colors duration-500 hover:translate-1 ease-in-out hover:bg-orange/3 px-2 -mx-2"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
               {/* Number */}

@@ -51,7 +51,7 @@ function StatItem({ value, suffix, label, accent, delay }) {
   return (
    <div
   ref={ref}
-  className="reveal  relative text-center px-6 py-10 border-r border-white/5 last:border-r-0 overflow-hidden"
+  className="reveal group relative text-center px-6 py-10 border-r border-white/5 last:border-r-0 overflow-hidden "
       style={{ transitionDelay: `${delay}s` }}
     >
       {/* ✅ Individual bottom bar */}
@@ -86,7 +86,7 @@ export default function Stats() {
   return (
     <section className="border-b border-white/5 bg-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid relative grid-cols-2 md:grid-cols-4 group">
+        <div className="grid relative grid-cols-2 md:grid-cols-4 ">
   
   {/* Bottom border animated bar */}
 
