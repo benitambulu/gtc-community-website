@@ -30,13 +30,18 @@ function useCountUp(target, duration = 1800, start = false) {
 }
 
 function StatItem({ value, suffix, label, accent, delay }) {
-  const ref       = useRef(null);
+  const ref = useRef(null);
   const [go, setGo] = useState(false);
-  const count     = useCountUp(value, 1800, go);
+  const count = useCountUp(value, 1800, go);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setGo(true); observer.disconnect(); } },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setGo(true);
+          observer.disconnect();
+        }
+      },
       { threshold: 0.4 }
     );
     if (ref.current) observer.observe(ref.current);
@@ -44,21 +49,32 @@ function StatItem({ value, suffix, label, accent, delay }) {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className="reveal text-center px-6 py-10 border-r border-white/5 last:border-r-0"
+   <div
+  ref={ref}
+  className="reveal  relative text-center px-6 py-10 border-r border-white/5 last:border-r-0 overflow-hidden"
       style={{ transitionDelay: `${delay}s` }}
     >
+      {/* ✅ Individual bottom bar */}
+      <div
+  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px]
+    bg-orange w-0
+    transition-all duration-500
+    group-hover:w-full`}
+/>
+
+      {/* Number */}
       <div
         className="font-display leading-none mb-2"
         style={{
           fontSize: 'clamp(48px, 6vw, 72px)',
-          color:       accent ? '#FF5C00' : '#ffffff',
-          textShadow:  accent ? '0 0 40px rgba(255,92,0,0.5)' : 'none',
+          color: accent ? '#FF5C00' : '#ffffff',
+          textShadow: accent ? '0 0 40px rgba(255,92,0,0.5)' : 'none',
         }}
       >
         {count}{suffix}
       </div>
+
+      {/* Label */}
       <div className="font-body text-white/35 text-[11px] tracking-[0.2em] uppercase">
         {label}
       </div>
@@ -70,15 +86,19 @@ export default function Stats() {
   return (
     <section className="border-b border-white/5 bg-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {stats.map((s, i) => (
-            <StatItem
-              key={i}
-              {...s}
-              delay={i * 0.1}
-            />
-          ))}
-        </div>
+        <div className="grid relative grid-cols-2 md:grid-cols-4 group">
+  
+  {/* Bottom border animated bar */}
+
+  {stats.map((s, i) => (
+    <StatItem
+      key={i}
+      {...s}
+      delay={i * 0.1}
+    />
+  ))}
+
+</div>
       </div>
     </section>
   );

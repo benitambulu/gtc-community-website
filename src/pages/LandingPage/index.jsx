@@ -8,6 +8,7 @@ import WhoItsFor from './WhoItsFor'
 import HowItWorks from './HowItWorks'
 import PeopleSection from './PeoplesSection'
 import UseScrollReveal from '../../hooks/UseScrollReveal'
+import Testimonials from './Testimonials'
 
 export const LandingPage = () => {
     
@@ -22,6 +23,7 @@ export const LandingPage = () => {
         <WhoItsFor/>
         <HowItWorks/>
         <PeopleSection/>
+        <Testimonials/>
     </div>
   )
 }

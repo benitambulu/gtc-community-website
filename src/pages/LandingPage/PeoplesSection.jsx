@@ -1,27 +1,38 @@
+import Founder from "../../assets/images/founder.png"
+import CommunityManager from "../../assets/images/cm.png"
+import Reviewer from "../../assets/images/reviewer.png"
+import Specialist from "../../assets/images/specialist.png"
+
 const members = [
+  // {
+  //   name: 'Benita Joseph',
+  //   role: 'Founder',
+  //   desc: '',
+  //   img: Founder,
+  // },
   {
-    name: 'Benita Joseph',
+    name: 'Benita Joseph ',
     role: 'Founder',
-    initial: 'B',
-    bg: 'linear-gradient(135deg, #1a0800 0%, #0f0500 100%)',
+    desc: 'Started GTC after realizing that consistency not talent is the real differentiator. Building the community she wished had existed. Now a big community',
+    img: Founder,
   },
   {
     name: 'Jonathan Chosen',
     role: 'Community Lead',
-    initial: 'J',
-    bg: 'linear-gradient(135deg, #1a1000 0%, #0f0800 100%)',
+    desc: 'Keeps the community culture strong, welcoming, and focused. makes sure every member feels seen and supported from day one.',
+    img: CommunityManager,
   },
   {
     name: 'Kolawole Ibrahim',
     role: 'Programs Director',
-    initial: 'K',
-    bg: 'linear-gradient(135deg, #001a0e 0%, #000f08 100%)',
+    desc: 'Reviews member progress, gives structured feedback, and ensures every growth track produces real, measurable outcomes weekly',
+    img: Reviewer,
   },
   {
-    name: 'Banke Salaudeen',
+    name: 'Lanre Salaudeen',
     role: 'Growth Strategist',
-    initial: 'R',
-    bg: 'linear-gradient(135deg, #08001a 0%, #04000f 100%)',
+    desc: "Passionate about helping members break through plateaus and find their consistency rhythm no matter where they're starting from.",
+    img: Specialist,
   },
 ];
 
@@ -49,99 +60,43 @@ export default function PeopleSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {members.map((m, i) => (
             <div
-              key={i}
-              className="reveal group relative overflow-hidden cursor-default"
-              style={{
-                background: m.bg,
-                border: '1px solid rgba(255,255,255,0.05)',
-                transitionDelay: `${i * 0.12}s`,
-                transition: 'transform 0.3s ease, border-color 0.3s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-6px)';
-                e.currentTarget.style.borderColor = 'rgba(255,92,0,0.35)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0px)';
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
-              }}
-            >
+  key={i}
+  className="reveal group relative overflow-hidden p-6 flex flex-col justify-between cursor-default border border-white/5 rounded-xl transition-all duration-300  hover:border-orange/30"
+  style={{ transitionDelay: `${i * 0.12}s` }}
+>
+  {/* 🔥 Background gradient (like your design) */}
+  <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition duration-500 bg-gradient-to-br from-orange/20 via-transparent to-transparent" />
 
-              {/* ── Avatar area ── */}
-              <div className="relative h-44 flex items-center justify-center overflow-hidden">
+  {/* ── Top (Avatar) ── */}
+  <div className="flex items-center justify-center h-40 relative z-10">
+    <img
+      src={m.img}
+      alt={m.name}
+      className="w-30 h-30 object-contain transition-transform duration-300 group-hover:scale-110"
+    />
+  </div>
 
-                {/* Radial glow bg */}
-                <div
-                  className="absolute inset-0 opacity-20 transition-opacity duration-300 group-hover:opacity-40"
-                  style={{
-                    background: 'radial-gradient(circle at center, #FF5C00, transparent 65%)',
-                  }}
-                />
+  {/* ── Bottom Content ── */}
+  <div className="relative z-10">
+    {/* Name */}
+    <div className="font-heading font-bold text-white text-[14px] uppercase tracking-wide">
+      {m.name}
+    </div>
 
-                {/* Subtle grid pattern */}
-                <div
-                  className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(rgba(255,92,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,92,0,0.4) 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
-                  }}
-                />
+    {/* Role */}
+    <div className="text-orange text-[12px] mt-1 uppercase tracking-wide">
+      {m.role}
+    </div>
 
-                {/* Avatar circle */}
-                <div
-                  className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center
-                             transition-transform duration-300 group-hover:scale-110"
-                  style={{
-                    background: '#FF5C00',
-                    boxShadow: '0 0 30px rgba(255,92,0,0.5)',
-                  }}
-                >
-                  <span className="font-display text-white text-2xl tracking-widest">
-                    {m.initial}
-                  </span>
-                </div>
+    {/* 🔥 Hidden Description */}
+    <p className="text-white/40 text-[12px] mt-3 leading-relaxed opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+      {m.desc}
+    </p>
+  </div>
 
-                {/* Decorative ring around avatar */}
-                <div
-                  className="absolute z-10 w-24 h-24 rounded-full border border-orange/20
-                             transition-all duration-500 group-hover:border-orange/50
-                             group-hover:scale-110"
-                  style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
-                />
-              </div>
-
-              {/* ── Info ── */}
-              <div className="px-5 py-4 border-t border-white/5">
-                <div className="font-heading font-bold text-white uppercase tracking-wide text-[14px]">
-                  {m.name}
-                </div>
-                <div
-                  className="font-body text-[12px] tracking-wide mt-0.5 transition-colors duration-300 group-hover:text-orange"
-                  style={{ color: 'rgba(255,92,0,0.6)' }}
-                >
-                  {m.role}
-                </div>
-              </div>
-
-              {/* ── Bottom orange line reveal ── */}
-              <div
-                className="h-0.5 bg-orange transition-all duration-500"
-                style={{ width: '0%' }}
-                ref={(el) => {
-                  if (!el) return;
-                  const card = el.closest('.group');
-                  if (!card) return;
-                  card.addEventListener('mouseenter', () => {
-                    el.style.width = '100%';
-                  });
-                  card.addEventListener('mouseleave', () => {
-                    el.style.width = '0%';
-                  });
-                }}
-              />
-
-            </div>
+  {/* 🔥 Bottom hover bar */}
+  {/* <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-orange transition-all duration-500 group-hover:w-full" /> */}
+</div>
           ))}
         </div>
 

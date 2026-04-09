@@ -147,9 +147,10 @@ body::after {
   text-decoration: none;
   border: 1px solid rgba(255,255,255,0.2);
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, tranform 0.3s ease, color 0.2s ease;
 }
-.btn-ghost:hover { border-color: #FF5C00; color: #FF5C00; }
+.btn-ghost:hover::after { transform: translateX(0); }
+.btn-ghost:hover { border-color: #fcfaf9;  transform: translateY(-2px);}
 
 /* ── Cards ── */
 .card-hover {

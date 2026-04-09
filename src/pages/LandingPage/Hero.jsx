@@ -79,7 +79,7 @@ export default function Hero() {
             className="font-body text-white/45 text-[15px] leading-relaxed max-w-md"
           >
             GTC is a structured accountability community for hustling professionals,
-            students, and driven individuals serious about showing up — and growing —
+            students, and driven individuals serious about showing up and growing
             every single week.
           </p>
 
@@ -145,7 +145,7 @@ export default function Hero() {
               className="font-display text-orange leading-none"
               style={{ fontSize: '32px' }}
             >
-              503+
+              500+
             </div>
             <div className="font-body text-white/40 text-[11px] tracking-widest uppercase mt-0.5">
               Total Members
@@ -175,12 +175,12 @@ export default function Hero() {
       </div>
 
       {/* ── Scroll indicator ── */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="font-body text-[10px] tracking-[0.25em] uppercase text-white/30">
           Scroll
         </span>
         <div className="w-px h-10 bg-linear-to-b from-orange/60 to-transparent" />
-      </div>
+      </div> */}
 
     </section>
   );
