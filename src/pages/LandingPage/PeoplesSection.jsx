@@ -4,12 +4,6 @@ import Reviewer from "../../assets/images/reviewer.png"
 import Specialist from "../../assets/images/specialist.png"
 
 const members = [
-  // {
-  //   name: 'Benita Joseph',
-  //   role: 'Founder',
-  //   desc: '',
-  //   img: Founder,
-  // },
   {
     name: 'Benita Joseph ',
     role: 'Founder',
@@ -57,7 +51,7 @@ export default function PeopleSection() {
         </div>
 
         {/* ── Cards grid ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid  md:grid-cols-4 gap-4">
           {members.map((m, i) => (
             <div
   key={i}

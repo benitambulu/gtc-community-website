@@ -1,12 +1,12 @@
 const items = [
   'Structured Accountability',
-  '#1 Growth Tools',
+  'Weekly Check-Ins',
   'Result Driven',
   'Peer Support System',
   'Your Consistency Era Starts Now',
   'Grow Through Consistency',
   'Structured Accountability',
-  '#1 Growth Tools',
+  'Weekly Check-Ins',
   'Result Driven',
   'Peer Support System',
   'Your Consistency Era Starts Now',
@@ -36,21 +36,19 @@ export default function Ticker() {
             key={i}
             className="inline-flex items-center gap-3 mx-8"
           >
+            {/* Label */}
+            <span
+              className="font-heading font-semibold uppercase tracking-[0.18em] text-black text-xs"
+            >
+              {item}
+            </span>
             {/* Diamond separator */}
             <span
-              className="text-orange"
-              style={{ fontSize: '8px' }}
+              className="text-black/50 text-[6px]"
             >
               ◆
             </span>
 
-            {/* Label */}
-            <span
-              className="font-heading font-semibold uppercase tracking-[0.18em] text-white/45"
-              style={{ fontSize: '11px' }}
-            >
-              {item}
-            </span>
           </span>
         ))}
       </div>

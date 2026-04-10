@@ -67,11 +67,10 @@ function StatItem({ value, suffix, label, accent, delay }) {
         className="font-display leading-none mb-2"
         style={{
           fontSize: 'clamp(48px, 6vw, 72px)',
-          color: accent ? '#FF5C00' : '#ffffff',
-          textShadow: accent ? '0 0 40px rgba(255,92,0,0.5)' : 'none',
         }}
       >
-        {count}{suffix}
+        {count}
+        <span className='text-orange'>{suffix}</span>
       </div>
 
       {/* Label */}

@@ -4,7 +4,7 @@ const features = [
   {
     number: '01',
     title: 'Structured Accountability',
-    desc: 'Systems that keep you on-track, focused, and moving — even when motivation is at its lowest. Real accountability, not just vibes.',
+    desc: 'Systems that keep you on track, focused, and moving even when motivation is at its lowest.',
   },
   {
     number: '02',
@@ -14,12 +14,12 @@ const features = [
   {
     number: '03',
     title: 'Peer-Support System',
-    desc: "Surround yourself with people who take growth seriously. In GTC, your peers lift you — they don't pull you down.",
+    desc: "Surround yourself with people who take growth seriously. In GTC, your peers lift you they don't pull you down.",
   },
   {
     number: '04',
-    title: 'Weekly Check-Ins That Deliver',
-    desc: "The only growth that counts is the growth that doesn't quit when you think you can. Show up every week.",
+    title: 'Weekly Check-ins That Deliver',
+    desc: "We track your goals religiously. The only goals that counts not just when you think you are. Show up every week.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function WhatWeDo() {
 
               {/* Text */}
               <div className="flex-1">
-                <h3 className="font-heading font-bold text-white text-[18px] uppercase tracking-wide mb-2">
+                <h3 className="font-heading font-bold text-white text-[18px] capitalize tracking-wide mb-2">
                   {f.title}
                 </h3>
                 <p className="font-body text-white/40 text-[13px] leading-relaxed">
