@@ -9,6 +9,8 @@ import HowItWorks from './HowItWorks'
 import PeopleSection from './PeoplesSection'
 import UseScrollReveal from '../../hooks/UseScrollReveal'
 import Testimonials from './Testimonials'
+import Cta from './Cta'
+import Footer from './Footer'
 
 export const LandingPage = () => {
     
@@ -24,6 +26,8 @@ export const LandingPage = () => {
         <HowItWorks/>
         <PeopleSection/>
         <Testimonials/>
+        <Cta/>
+        <Footer/>
     </div>
   )
 }

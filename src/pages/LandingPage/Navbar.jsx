@@ -65,12 +65,12 @@ export default function Navbar() {
             >
               {({ isActive }) => (
                 <>
-                  {link.label}
+                  {/* {link.label} */}
                   {/* underline accent */}
-                  <span
+                  {/* <span
                     className="absolute -bottom-1 left-0 h-px bg-orange transition-all duration-300"
                     style={{ width: isActive ? '100%' : '0%' }}
-                  />
+                  /> */}
                   {!isActive && (
                     <span className="absolute -bottom-1 left-0 h-px bg-orange/50 w-0 group-hover:w-full transition-all duration-300" />
                   )}
