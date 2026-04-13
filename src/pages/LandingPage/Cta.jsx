@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function CTA() {
   return (
-    <section className="relative py-36 overflow-hidden bg-[#0A0A0A]">
+    <section className="relative py-36 overflow-hidden bg-dark">
 
       {/* ── Large radial glow center ── */}
       <div
@@ -24,20 +24,20 @@ export default function CTA() {
       />
 
       {/* ── Top edge line ── */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF5C00]/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange/40 to-transparent" />
 
       {/* ── Bottom edge line ── */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF5C00]/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange/40 to-transparent" />
 
       {/* ── Corner brackets ── */}
       {/* Top left */}
-      <div className="absolute top-8 left-8 w-8 h-8 border-t border-l border-[#FF5C00]/30" />
+      <div className="absolute top-8 left-8 w-8 h-8 border-t border-l border-orange/30" />
       {/* Top right */}
-      <div className="absolute top-8 right-8 w-8 h-8 border-t border-r border-[#FF5C00]/30" />
+      <div className="absolute top-8 right-8 w-8 h-8 border-t border-r border-orange/30" />
       {/* Bottom left */}
-      <div className="absolute bottom-8 left-8 w-8 h-8 border-b border-l border-[#FF5C00]/30" />
+      <div className="absolute bottom-8 left-8 w-8 h-8 border-b border-l border-orange/30" />
       {/* Bottom right */}
-      <div className="absolute bottom-8 right-8 w-8 h-8 border-b border-r border-[#FF5C00]/30" />
+      <div className="absolute bottom-8 right-8 w-8 h-8 border-b border-r border-orange/30" />
 
       {/* ── Content ── */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center text-center gap-8">
@@ -55,7 +55,7 @@ export default function CTA() {
           >
             <span className="block text-white">Your</span>
             <span
-              className="block text-[#FF5C00] text-glow"
+              className="block text-orange text-glow"
               style={{ WebkitTextStroke: '1px #FF5C00' }}
             >
               Consistency
@@ -72,7 +72,7 @@ export default function CTA() {
           Show up every single week. No more starting over.
         </p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <div className="flex flex-wrap items-center justify-center gap-4 reveal">
           <Link
             to="/join"
@@ -81,13 +81,7 @@ export default function CTA() {
           >
             Join GTC Now
           </Link>
-          <Link
-            to="/programs"
-            className="btn-ghost"
-            style={{ padding: '14px 36px', fontSize: '13px' }}
-          >
-            Explore Programs
-          </Link>
+         
         </div>
 
         {/* Social proof strip */}
@@ -99,8 +93,8 @@ export default function CTA() {
             {['A', 'J', 'K', 'R', 'F'].map((letter, i) => (
               <div
                 key={i}
-                className="w-7 h-7 rounded-full border-2 border-[#0A0A0A] flex items-center
-                           justify-center bg-[#FF5C00] -ml-2 first:ml-0"
+                className="w-7 h-7 rounded-full border-2 border-dark flex items-center
+                           justify-center bg-orange -ml-2 first:ml-0"
                 style={{
                   fontSize: '10px',
                   fontFamily: 'var(--font-display)',
