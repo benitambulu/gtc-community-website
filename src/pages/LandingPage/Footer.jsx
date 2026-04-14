@@ -7,7 +7,6 @@ export default function Footer() {
       {/* ── Main grid ── */}
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-30">
 
-        {/* ── Col 1: Brand ── */}
         <div className="flex flex-col gap-5">
 
           <Link to="/" className="flex items-center gap-2.5 group w-fit">

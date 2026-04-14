@@ -4,7 +4,6 @@ export default function CTA() {
   return (
     <section className="relative py-36 overflow-hidden bg-dark">
 
-      {/* ── Large radial glow center ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -23,31 +22,22 @@ export default function CTA() {
         }}
       />
 
-      {/* ── Top edge line ── */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange/40 to-transparent" />
 
-      {/* ── Bottom edge line ── */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange/40 to-transparent" />
 
       {/* ── Corner brackets ── */}
-      {/* Top left */}
       <div className="absolute top-8 left-8 w-8 h-8 border-t border-l border-orange/30" />
-      {/* Top right */}
       <div className="absolute top-8 right-8 w-8 h-8 border-t border-r border-orange/30" />
-      {/* Bottom left */}
       <div className="absolute bottom-8 left-8 w-8 h-8 border-b border-l border-orange/30" />
-      {/* Bottom right */}
       <div className="absolute bottom-8 right-8 w-8 h-8 border-b border-r border-orange/30" />
 
-      {/* ── Content ── */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center text-center gap-8">
 
-        {/* Label */}
         <span className="section-label reveal">
           The Best Chapter Starts Now
         </span>
 
-        {/* Headline */}
         <div className="reveal">
           <h2
             className="font-display uppercase leading-none"
@@ -64,7 +54,6 @@ export default function CTA() {
           </h2>
         </div>
 
-        {/* Sub copy */}
         <p
           className="font-body text-white/40 text-[15px] leading-relaxed max-w-md reveal"
         >
@@ -75,7 +64,7 @@ export default function CTA() {
         {/* CTA */}
         <div className="flex flex-wrap items-center justify-center gap-4 reveal">
           <Link
-            to="/join"
+            to="/"
             className="btn-orange"
             style={{ padding: '14px 36px', fontSize: '13px' }}
           >
@@ -88,7 +77,6 @@ export default function CTA() {
         <div
           className="reveal flex items-center gap-3 mt-2"
         >
-          {/* Avatar stack */}
           <div className="flex items-center">
             {['A', 'J', 'K', 'R', 'F'].map((letter, i) => (
               <div

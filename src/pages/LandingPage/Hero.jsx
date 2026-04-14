@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-dark">
 
-      {/* ── Background radial glow ── */}
+      {/* Background radial glow  */}
       <div
         className="absolute top-1/2 -right-25 -translate-y-1/2 w-175 h-175 rounded-full pointer-events-none"
         style={{
@@ -31,7 +31,7 @@ export default function Hero() {
         }}
       />
 
-      {/* ── Subtle grid ── */}
+      {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04]"
         style={{
@@ -43,7 +43,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 items-center">
 
-        {/* ════ LEFT — Text ════ */}
+        {/* LEFT Text  */}
         <div className="space-y-6 z-10">
 
           {/* Badge */}
@@ -83,12 +83,12 @@ export default function Hero() {
             every single week.
           </p>
 
-          {/* CTAs */}
+          {/* CTA */}
           <div ref={ref(3)} className="flex flex-wrap gap-4 pt-1">
-            <Link to="/join" className="btn-orange">
+            <Link to="/" className="btn-orange">
               Join the Community
             </Link>
-            <Link to="/programs" className="btn-ghost">
+            <Link to="/" className="btn-ghost">
               View Programs
               <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
                 <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.5"
@@ -98,7 +98,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ════ RIGHT — Orbit graphic ════ */}
+        {/* RIGHT Orbit graphic */}
         <div
           ref={ref(4)}
           className="relative flex items-center justify-center h-90 lg:h-120"
@@ -132,7 +132,7 @@ export default function Hero() {
           <div className="orbit-dot" />
           <div className="orbit-dot orbit-dot-2" />
 
-          {/* ── Floating stat — top right ── */}
+          {/* Floating stat top right */}
           <div
             className="absolute top-6 right-0 lg:right-4 bg-[#111]/90 border border-white/8
                         backdrop-blur-sm px-4 py-3 text-right"
@@ -152,7 +152,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── Floating stat — bottom left ── */}
+          {/* Floating stat bottom left */}
           <div
             className="absolute bottom-10 left-0 lg:left-4 bg-[#111]/90 border border-white/8
                         backdrop-blur-sm px-4 py-3"

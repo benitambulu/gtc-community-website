@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const navLinks = [
-  { to: '/about',    label: 'About Us'  },
-  { to: '/programs', label: 'Programs'  },
-  { to: '/impact',   label: 'Impact'    },
-  { to: '/media',    label: 'Media'     },
+  { to: '/',    label: 'About Us'  },
+  { to: '/', label: 'Programs'  },
+  { to: '/',   label: 'Impact'    },
+  { to: '/',    label: 'Media'     },
 ];
 
 export default function Navbar() {
@@ -82,7 +82,7 @@ export default function Navbar() {
 
         {/* ── Desktop CTA ── */}
         <div className="hidden md:block">
-          <Link to="/join" className="btn-orange text-[12px] py-2.5 px-5">
+          <Link to="/" className="btn-orange text-[12px] py-2.5 px-5">
             Join Us
           </Link>
         </div>
@@ -137,7 +137,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
                 `font-body text-[14px] tracking-wide transition-colors duration-200 ${
-                  isActive ? 'text-orange' : 'text-white/60 hover:text-white'
+                  isActive ? 'text-white/60' : 'text-orange hover:text-orange'
                 }`
               }
               style={{
@@ -148,7 +148,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <Link
-            to="/join"
+            to="/"
             onClick={() => setMenuOpen(false)}
             className="btn-orange text-center mt-2"
           >

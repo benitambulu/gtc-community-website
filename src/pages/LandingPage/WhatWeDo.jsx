@@ -48,7 +48,7 @@ export default function WhatWeDo() {
             to actually follow through.
           </p>
 
-          <Link to="/join" className="btn-orange reveal">
+          <Link to="/" className="btn-orange reveal">
             Join Our Team
           </Link>
 

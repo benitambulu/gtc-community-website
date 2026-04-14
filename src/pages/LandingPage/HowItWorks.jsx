@@ -39,7 +39,7 @@ export default function HowItWorks() {
             </h2>
           </div>
 
-          <Link to="/join" className="btn-ghost reveal self-start md:self-end">
+          <Link to="/" className="btn-ghost reveal self-start md:self-end">
             Get Started
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor"
